@@ -2,7 +2,7 @@
   <div class="app">
     <p>{{ name }} - {{ age }}</p>
     <button @click="changeName('Zelda')">change name</button>
-    <button @click="changeAge('30')">change age</button>
+    <button @click="changeAge(30)">change age</button>
   </div>
 </template>
 
@@ -21,10 +21,14 @@ export default defineComponent({
   methods: {
     changeName(name: string) {
       this.name = name
+      console.log(name)
+      console.log(this.name)
       return name
     },
     changeAge(age: number | string) {
       this.age = age
+      console.log(age)
+      console.log(this.age)
       return age
     }
   }
