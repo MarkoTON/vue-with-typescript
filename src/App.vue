@@ -23,12 +23,14 @@ export default defineComponent({
       this.name = name
       console.log(name)
       console.log(this.name)
+      // ovaj return je nebitan
       return name
     },
     changeAge(age: number | string) {
       this.age = age
       console.log(age)
       console.log(this.age)
+      // ovaj return je nebitan
       return age
     }
   }
