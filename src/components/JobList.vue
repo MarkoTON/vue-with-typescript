@@ -21,6 +21,7 @@ import Job from '@/types/Job'
 export default defineComponent({
   props: {
     jobs: {
+      // Moze da bude ovako, a moze samo da bude Array
       type: Array as PropType<Job[]>,
       required: true
     }
