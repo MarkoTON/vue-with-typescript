@@ -27,6 +27,7 @@ export default defineComponent({
       required: true
     },
     order: {
+      // Da bude String ali jedan od ovih koji su definisani preko <OrderTerm>
       type: String as PropType<OrderTerm>,
       required: true
     }
