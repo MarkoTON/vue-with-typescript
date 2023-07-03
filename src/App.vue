@@ -3,6 +3,8 @@
     <p>{{ name }} - {{ age }}</p>
     <button @click="changeName('Zelda')">change name</button>
     <button @click="changeAge(30)">change age</button>
+    <hr>
+    <p>{{changeName('Marko')}}</p>
   </div>
 </template>
 
