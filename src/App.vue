@@ -16,7 +16,7 @@ export default defineComponent({
   components: {},
   data() {
     return {
-      name: 'Link',
+      name: 'Link' as string,
       age: 25 as number | string
     }
   },
