@@ -18,8 +18,8 @@
 
 <script lang="ts">
 import { defineComponent, PropType, computed } from 'vue'
-import Job from '@/types/Job'
-import OrderTerm from '@/types/OrderTerm'
+import Job from '../types/Job'
+import OrderTerm from '../types/OrderTerm'
 
 export default defineComponent({
   props: {
@@ -34,6 +34,27 @@ export default defineComponent({
   },
   setup(props) {
     const orderedJobs = computed(() => {
+
+      // // console.log(props);
+      // // console.table(props);
+      // // console.log(props.jobs);
+      // // console.table(props.jobs);
+      // console.log([...props.jobs]);
+      // console.table([...props.jobs]);
+      
+      // Nije mi najjasnije zasto je stavio [...props.jobs], izgleda je zbog TypeScript-a i 'Job' interface-a
+
+      // [...props.jobs].forEach(element => {
+      //   console.log(element.title);
+      // });
+
+      // props.jobs.forEach(element => {
+      //   console.log(element.title);
+      // });
+
+      // return [...props.jobs].sort((a: Job, b: Job) => {
+      //   return a[props.order] > b[props.order] ? 1 : -1
+      // })
       return [...props.jobs].sort((a: Job, b: Job) => {
         return a[props.order] > b[props.order] ? 1 : -1
       })
